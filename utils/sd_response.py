@@ -23,8 +23,10 @@ def response_generate(prompt, image, wight, height):
         "webhook": None,
         "track_id": None
     }
-
-    img2img_response = requests.post(url='http://46.147.107.34:900/sdapi/v1/img2img', json=img2img_payload)
+    
+    url=""
+    
+    img2img_response = requests.post(url=f'{url}/sdapi/v1/img2img', json=img2img_payload)
 
     r = img2img_response.json()
 
